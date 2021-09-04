@@ -5,6 +5,8 @@ public class BookDao {
 public static int save(String callno,String name,String author,String publisher,int quantity){
 	int status=0;
 	try{
+		/* jh
+		*/
 		Connection con=DB.getConnection();
 		PreparedStatement ps=con.prepareStatement("insert into books(callno,name,author,publisher,quantity) values(?,?,?,?,?)");
 		ps.setString(1, callno);
